@@ -1,0 +1,52 @@
+.new-policy {
+  background-color: #3cc4a6;
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 50rem;
+  max-width: 95%;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  font-family: "Brush Script MT", cursive;
+}
+
+.new-policy button {
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 1px solid #616469;
+  background-color: #83ace0;
+  color: white;
+  border-radius: 12px;
+  margin-right: 1rem;
+  font-family: "Brush Script MT", cursive;
+}
+
+.new-policy button:hover,
+.new-policy button:active {
+  background-color: #4b627c;
+  border-color: #34465c;
+}
+
+.new-policy button.alternative {
+  color: #3f6699;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.new-policy button.alternative:hover,
+.new-policy button.alternative:active {
+  background-color: #ddb3f8;
+}
+
+.new-policy__free {
+  text-align: center;
+  font: ariel;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 5px solid #2a292b;
+  background-color: #3cc4a6;
+  color: burlywood;
+  border-radius: 12px;
+  margin-right: 1rem;
+}

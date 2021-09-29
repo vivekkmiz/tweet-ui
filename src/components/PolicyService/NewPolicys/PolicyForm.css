@@ -1,0 +1,52 @@
+.new-policy__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.new-policy__control label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.new-policy__control input {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 20rem;
+  max-width: 100%;
+}
+.custom {
+  text-align: center;
+  font-size: 0.8cm;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 5px solid #d6f3ee;
+  background-color: #22ccbe;
+  color: rgb(250, 249, 248);
+  border-radius: 12px;
+  margin-right: 1rem;
+}
+.new-policy__actions {
+  text-align: center;
+  font-size: 1cm;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 5px solid #d6f3ee;
+  background-color: #3cc4a6;
+  color: rgb(250, 249, 248);
+  border-radius: 12px;
+  margin-right: 1rem;
+}
+.new-policy__control select {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 20rem;
+  max-width: 100%;
+}

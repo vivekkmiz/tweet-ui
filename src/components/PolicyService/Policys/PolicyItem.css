@@ -1,0 +1,58 @@
+.policy-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  background-color: #097a6b;
+}
+
+.policy-item__description {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-end;
+  flex-flow: column-reverse;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.policy-item h2 {
+  color: #3a3a3a;
+  font-size: 1rem;
+  flex: 1;
+  margin: 0 1rem;
+  color: white;
+}
+
+.policy-item__price {
+  font-size: 1rem;
+  font-weight: bold;
+  color:rgb(221, 224, 172);
+  background-color: #3cc4a6;
+  border: 0.5px solid rgb(201, 209, 162);
+  padding: 0.5rem;
+  border-radius: 12px;
+  font-family: "Brush Script MT", cursive;
+}
+
+@media (min-width: 580px) {
+  .policy-item__description {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+    font-family: "Brush Script MT";
+  }
+
+  .policy-item__description h2 {
+    font-size: 1.25rem;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .policy-item__price {
+    font-size: 1.25rem;
+    padding: 0.5rem 1.5rem;
+    font-family: "Brush Script MT", cursive;
+  }
+}
