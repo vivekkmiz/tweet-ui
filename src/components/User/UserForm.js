@@ -4,11 +4,11 @@ import { useHistory } from "react-router-dom";
 import MainHeader from "../Z-UI/MainHeader";
 
 const UserForm = (props) => {
-  const [fname, setEnteredFname] = useState(props.data.fname);
-  const [lname, setEnteredLname] = useState(props.data.lname);
-  const [_username, setEnteredUsername] = useState(props.data.username);
-  const [_password, setEnteredPassword] = useState(props.data.password);
-  const [_email, setEnteredEmail] = useState(props.data.email);
+  const [firstName, setEnteredFname] = useState(props.data.firstName);
+  const [lastName, setEnteredLname] = useState(props.data.lastName);
+  const [userName, setEnteredUsername] = useState(props.data.userName);
+  const [password, setEnteredPassword] = useState(props.data.password);
+  const [email, setEnteredEmail] = useState(props.data.email);
  
 
   const history = useHistory();
@@ -44,13 +44,13 @@ const UserForm = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    if ((validateEmail(_email) || _email.length===0) && (validateName(fname) || fname.length===0)&& (validateName(lname) || lname.length===0) ){
+    if ((validateEmail(email) || email.length===0) && (validateName(firstName) || firstName.length===0)&& (validateName(lastName) || lastName.length===0) ){
       const userData = {
-        fname: fname,
-        lname: lname,
-        username: _username,
-        password: _password,
-        email: _email,  
+        firstName: firstName,
+        lastName: lastName,
+        userName: userName,
+        password: password,
+        email: email,  
       };
 
       props.onUpdate(userData);

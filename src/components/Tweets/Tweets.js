@@ -13,8 +13,8 @@ const Tweets = (props) => {
         {props.items.map((tweetData) => (
           <TweetItem
             username={tweetData.username}
-            tweet={tweetData.tweet}
-            date={tweetData.date}
+            tweet={tweetData.content}
+            likes={tweetData.likes}
           />
         ))}
       </Card>

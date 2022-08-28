@@ -5,14 +5,12 @@ import "./UsersList.css";
 const UsersList = (props) => {
 
     return (
-        <div><MainHeader/>
         <div classname = "users">
           {props.usersList.map((userData) => (
             <User userData = {userData}
             />
           ))}
 
-      </div>
       </div>
     );
   };

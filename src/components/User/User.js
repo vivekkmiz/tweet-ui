@@ -17,15 +17,15 @@ const User = (props) => {
         <table className="tablez">
           <tr>
             <td>First Name</td>
-            <td>{props.userData.fname}</td>
+            <td>{props.userData.firstName}</td>
           </tr>
           <tr>
             <td> Last Name</td>
-            <td>{props.userData.lname}</td>
+            <td>{props.userData.lastName}</td>
           </tr>
           <tr>
             <td>Username: </td>
-            <td>{props.userData.username}</td>
+            <td>{props.userData.userName}</td>
           </tr>
           <tr>
             <td>Email: </td>

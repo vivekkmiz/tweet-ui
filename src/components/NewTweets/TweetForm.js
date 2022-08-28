@@ -13,9 +13,7 @@ const TweetForm = (props) => {
 
     const TweetData = {
       username: props.username,
-      tweet: enteredTweet,
-      date: new Date(),
-      
+      content: enteredTweet
     };
 
     console.log(enteredTweet);
