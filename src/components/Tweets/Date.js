@@ -1,8 +1,8 @@
 import React from "react";
 
-import "./PolicyDate.css";
+import "./Date.css";
 
-const PolicyDate = (props) => {
+const Date = (props) => {
   const month = props.date.toLocaleString("en-US", { month: "long" });
   const day = props.date.toLocaleString("en-US", { day: "2-digit" });
   const year = props.date.getFullYear();
@@ -16,4 +16,4 @@ const PolicyDate = (props) => {
   );
 };
 
-export default PolicyDate;
+export default Date;
