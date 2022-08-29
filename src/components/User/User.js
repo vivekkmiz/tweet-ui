@@ -1,12 +1,10 @@
 import React from "react";
 import "./User.css";
 import { NavLink } from "react-router-dom";
-import MainHeader from "../Z-UI/MainHeader";
 
 const User = (props) => {
   return (
     <div>
-      <MainHeader />
       <div className="abc">
         <h1 className="custom">
           Your Details{" "}

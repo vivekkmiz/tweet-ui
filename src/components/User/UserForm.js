@@ -13,6 +13,10 @@ const UserForm = (props) => {
 
   const history = useHistory();
 
+  const addUserHandler = (user) => {
+    //do a post user call
+  };
+
   const fnameChangeHandler = (event) => {
     setEnteredFname(event.target.value);
   };
@@ -54,7 +58,7 @@ const UserForm = (props) => {
       };
 
       props.onUpdate(userData);
-      props.onAddUser(userData);
+      addUserHandler(userData);
       history.push("/myProfile");
     } else {
       console.log("Name ane email validaion has failed");

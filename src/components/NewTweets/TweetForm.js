@@ -12,8 +12,15 @@ const TweetForm = (props) => {
     event.preventDefault();
 
     const TweetData = {
-      username: props.username,
-      content: enteredTweet
+      id: Math.floor(Math.random() * 10000000),
+      tweet: {
+        content: enteredTweet,
+        likes: {},
+        replies: {},
+        username: "vivek",
+        tweetId: "stringger"
+      }
+
     };
 
     console.log(enteredTweet);
@@ -35,7 +42,7 @@ const TweetForm = (props) => {
             />
           </div>
         </div>
-        <button className="custom" type="submit">
+        <button className="custom" onClick={submitHandler}>
           Tweet
         </button>
       </form>
