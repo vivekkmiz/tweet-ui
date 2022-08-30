@@ -9,48 +9,49 @@ import Login from "./SignIn/Login";
 import MainHeader from "./Z-UI/MainHeader";
 //import "./app.css"
 
-const dummy_user = {
-  firstName: "",
-  lastName: "",
-  userName: "",
-  password: "",
-  email: "",  
-}
+
 
 const App = () => {
-  const [userData, setUpdate] = useState(dummy_user);
+  const [userData, setUpdate] = useState(null);
   console.log(userData);
 
   const updateHandler = (updateData) => {
     const userData = {
       ...updateData,
     };
-    console.log(userData);
-    console.log("update success full");
+    console.log("update success full" + JSON.stringify(updateData));
     setUpdate(userData);
   };
+  const signOffHandler = (updateData) => {
+    console.log("Signing OF USER");
+    setUpdate(null);
+  };
 
-  return (
-    <div className = "app">
+  if (userData == null) return (
+    <div>
+      <Route exact path="/">
+        <Login data={userData} onUpdateUser={updateHandler} />
+      </Route>
+      <Route exact path="/signup">
+        <UserForm data={userData} onUpdate={updateHandler} />
+      </Route>
+    </div>);
+
+  else return (
+    <div >
       <main>
-        <MainHeader/>
-        <Route exact path="/">
-        <Login data={userData} onUpdateUser = {updateHandler}/>
-        </Route>
-        <Route exact path="/signup">
-        <UserForm data={userData} onUpdate = {updateHandler}/>
-        </Route>
+        <MainHeader userData = {userData} signOffHandler = {signOffHandler}/>
         <Route exact path="/myProfile">
           <User userData={userData} />
         </Route>
         <Route exact path="/users">
-          <UsersList userData={userData}  />
+          <UsersList userData={userData} />
         </Route>
         <Route path="/tweet">
           <NewTweet userData={userData} />
         </Route>
-        <Route  path="/tweets">
-          <Tweets userData={userData}/>
+        <Route path="/tweets">
+          <Tweets userData={userData} />
         </Route>
       </main>
     </div>

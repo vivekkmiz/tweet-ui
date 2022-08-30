@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import classes from "./MainHeader.css";
 
-const MainHeader = () => {
+const MainHeader = (props) => {
   return (
     <header activeclassName={classes.header}>
       <nav>
@@ -27,7 +27,7 @@ const MainHeader = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to="/">
+            <NavLink activeClassName={classes.active} to="/logOut" onClick={props.signOffHandler}>
               Log Out !
             </NavLink>
           </li>

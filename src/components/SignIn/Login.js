@@ -6,7 +6,6 @@ import { useHistory } from "react-router-dom";
 function Login(props) {
 
   const [usersList, setUsersList] = useState([]);
-  const [user, setUser] = useState(null);
   const [userId, setUserId] = useState("");
   const [password, setPassword] = useState([]);
 
@@ -27,7 +26,6 @@ function Login(props) {
   const history = useHistory();
   const submitHandler = () => {
     if(userIsAuthenticated(userId, password)){
-      props.onUpdateUser(user);
       history.push("/myProfile")
     }
   };
@@ -35,15 +33,9 @@ function Login(props) {
   const userIsAuthenticated = (userId, password) => {
     for (var index = 0; index < usersList.length; index++) {
       var _user = usersList[index];
-      console.log(_user.userName);
-      console.log(_user.email);
-      console.log(_user.password);
-      console.log("userId : "+userId);
-      console.log("password: "+password);
-
       if(userId.length > 1 && (_user.userName == userId || _user.email == userId) && _user.password == password){
-        setUser(_user)
-        console.log(_user);
+        props.onUpdateUser(_user);
+        console.log("user updated to : "+JSON.stringify(_user));
         return true;
       }
       else{
